@@ -1,8 +1,82 @@
-
+/* html {
+  background-color: #09393f;
+} */
+html.dark-mode {
+  background-color: rgb(26, 17, 17);
+}
 body {
+  transition: background 250ms ease;
+  background-color: var(--bg-color);
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 140px;
+}
+.toggle span {
+  margin: 0 0.5rem;
+}
+.toggle input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.toggle input[type="checkbox"]:checked + label {
+  background: teal;
+}
+.toggle input[type="checkbox"]:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+.toggle label {
+  cursor: pointer;
+  width: 75px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.27);
+  display: block;
+  border-radius: 40px;
+  position: relative;
+}
+.toggle label:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+/* html {
+  height: 100%;
+} */
+/* body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+} */
+
+
+/* ------------------------- */
+/* body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-}
+} */
 
 a {
   color: #0563bb;

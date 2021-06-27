@@ -25,6 +25,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/assets/css/switch_mode.css"> -->
 
   
 </head>
@@ -39,6 +40,18 @@
 
     <nav class="nav-menu">
       <ul>
+        <li><div class="toggle">
+          <span>🌙</span>
+          <input
+            type="checkbox"
+            id="toggle-switch"
+            onchange="toggleDarkMode(this)"
+          />
+          <label for="toggle-switch"
+            ><span class="screen-reader-text">Toggle Color Scheme</span></label
+          >
+          <span>☀️</span>
+        </div></li>
         <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
@@ -704,6 +717,7 @@
 
   
   <script src="assets/js/main.js"></script>
+  <script src="/assets/js/switch_mode.js"></script>
 
 </body>
 
